@@ -22,6 +22,12 @@
 
 -- Update Bilbo Baggins record so that the postal code changes to "11122"
 
+    update customers set postalcode = '11122' where contactname = 'Bilbo Baggins'
+
 -- (Stretch) Find a query to discover how many different cities are stored in the Customers table. Repeats should not be double counted
 
+    select distinct city from customers
+
 -- (Stretch) Find all suppliers who have names longer than 20 characters. You can use `length(SupplierName)` to get the length of the name
+
+    select * from suppliers where length(SupplierName) > 20
